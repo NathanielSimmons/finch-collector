@@ -16,8 +16,9 @@
               <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Finch Collector</a></li>
             </ul>
             <ul class="right">
-              <li><a href="/about">About</a></li>
-              <li><a href="/finches">View All Finches</a></li>
+              <li><a href="{%url 'about' %}">About</a></li>
+              <li><a href="{% url 'finches_create' %}">Add a Finch</a></li>
+              <li><a href="{%url 'all_finches' %}">View All Finches</a></li>
             </ul>
           </div>
         </nav>
@@ -27,7 +28,7 @@
         {% endblock %}
       </main>
       <footer class="page-footer">
-        <div class="right">All Rights Reserved, &copy; 2024 Finch Collector &nbsp;</div>
+        <div class="right">All Rights Reserved, &copy; {% now "Y" %} Finch Collector &nbsp;</div>
       </footer>
 </body>
 </html>
